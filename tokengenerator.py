@@ -25,34 +25,26 @@ ERROR/ОШИБКА """)
 
 if laung=="RU" or laung=="ru":
     rang = int(input("Введите количество токенов: "))
-
-if laung=="EN" or laung=="en":
+elif laung=="EN" or laung=="en":
     rang = int(input("Enter the number of tokens: "))
 
-if laung=="RU" or laung=="ru":
+if laung=="RU" or laung=="ru" or laung=="EN" or laung=="en":
     for iru in range(rang):
         ch2 = ''.join((random.choice(chars2) for iru in range (3)))
         odin = ''.join((random.choice(chars) for iru in range (21)))
         dva = ''.join((random.choice(chars) for iru in range (6)))
         tri = ''.join((random.choice(chars) for iru in range (24)))
-        print("Токен: " + ch2 + odin + "." + dva + "." + tri)
+        if laung=="RU" or laung=="ru":
+            print("Токен: " + ch2 + odin + "." + dva + "." + tri)
+        else:
+            print("Token: " + ch2 + odin + "." + dva + "." + tri)
         result = ch2 + odin + "." + dva + "." + tri
         output = open("tokens.txt", "a")
         output.write(result + "\n")
-    print("посмотри tokens.txt")
-
-if laung=="EN" or laung=="en":
-    for ien in range(rang):
-        ch2 = ''.join((random.choice(chars2) for ien in range (3)))
-        odin = ''.join((random.choice(chars) for ien in range (21)))
-        dva = ''.join((random.choice(chars) for ien in range (6)))
-        tri = ''.join((random.choice(chars) for ien in range (24)))
-        print("Token: " + ch2 + odin + "." + dva + "." + tri)
-        result = ch2 + odin + "." + dva + "." + tri
-        output = open("tokens.txt", "a")
-        output.write(result + "\n")
-
-    print("check tokens.txt")
+    if laung=="RU" or laung=="ru":
+        print("посмотри tokens.txt")
+    else:
+        print("check tokens.txt")
 
 print("exit... 3 sec")
 time.sleep(3)
