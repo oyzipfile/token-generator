@@ -2,19 +2,11 @@
 import random
 import time
 import colorama
-laung = input("Launge [RU/EN] :  ")
-
 chars = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0987654321__-"
 chars2 = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890"
 colorama.init()
-if laung != "RU" and laung != "EN" and laung != "ru" and laung != "en":
-    print(f"""{colorama.Fore.RED}
-ERROR/ОШИБКА """)
-    time.sleep(3)
-    exit()
-
-if laung=="RU" or laung=="ru":
-    print(f"""{colorama.Fore.MAGENTA}
+laung = input("Language [RU/EN] :  ")
+print(f"""{colorama.Fore.MAGENTA}
  _______ _______ ___   _ _______ __    _ 
 |       |       |   | | |       |  |  | |
 |_     _|   _   |   |_| |    ___|   |_| |
@@ -25,21 +17,17 @@ if laung=="RU" or laung=="ru":
                         by pighax
 
  """)
+laung = input("Language [RU/EN] :  ")
+if laung != "RU" and laung != "EN" and laung != "ru" and laung != "en":
+    print(f"""{colorama.Fore.RED}
+ERROR/ОШИБКА """)
+    time.sleep(3)
+    exit()
 
+if laung=="RU" or laung=="ru":
     rang = int(input("Введите количество токенов: "))
 
 if laung=="EN" or laung=="en":
-    print(f"""{colorama.Fore.MAGENTA}
- _______ _______ ___   _ _______ __    _ 
-|       |       |   | | |       |  |  | |
-|_     _|   _   |   |_| |    ___|   |_| |
-  |   | |  | |  |      _|   |___|       |
-  |   | |  |_|  |     |_|    ___|  _    |
-  |   | |       |    _  |   |___| | |   |
-  |___| |_______|___| |_|_______|_|  |__|   
-                        by pighax   
-
- """)
     rang = int(input("Enter the number of tokens: "))
 
 if laung=="RU" or laung=="ru":
