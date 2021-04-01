@@ -1,2 +1,2 @@
 # token-generator
-ебанный позор
+no
