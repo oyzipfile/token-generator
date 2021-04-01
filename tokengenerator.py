@@ -5,7 +5,6 @@ import colorama
 chars = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0987654321__-"
 chars2 = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890"
 colorama.init()
-laung = input("Language [RU/EN] :  ")
 print(f"""{colorama.Fore.MAGENTA}
  _______ _______ ___   _ _______ __    _ 
 |       |       |   | | |       |  |  | |
